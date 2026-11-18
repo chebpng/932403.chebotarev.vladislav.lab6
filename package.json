@@ -1,0 +1,16 @@
+{
+  "name": "932403.chebotarev.vladislav.lab6",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №6: Express-сервер, каталог книг и PWA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "author": "Чеботарёв Владислав",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

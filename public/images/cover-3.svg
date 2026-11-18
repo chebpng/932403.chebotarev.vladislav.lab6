@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" role="img" aria-label="Обложка книги «Сто лет одиночества»">
+    <rect width="300" height="420" fill="#3E2723"/>
+    <rect x="14" y="14" width="272" height="392" fill="none" stroke="#F5EDE0" stroke-opacity="0.55" stroke-width="2"/>
+    <line x1="55" y1="215" x2="245" y2="215" stroke="#F5EDE0" stroke-opacity="0.55" stroke-width="2"/>
+    <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#F5EDE0">СТО ЛЕТ</text>
+    <text x="150" y="195" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#F5EDE0">ОДИНОЧЕСТВА</text>
+    <text x="150" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#F5EDE0">Г. Г. Маркес</text>
+</svg>

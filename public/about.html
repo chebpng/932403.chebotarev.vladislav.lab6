@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4E342E">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/icons/icon-192.png">
+    <title>О себе — Книжный червь (лабораторная №6)</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Чеботарёв Владислав</h1>
+        <h2>Книжный червь и писатель</h2>
+        <img
+            src="images/avatar.jpg"
+            width="300"
+            height="300"
+            alt="Аватар: Чеботарёв Владислав, книжный червь и писатель"
+        >
+        <button type="button" id="theme-toggle" class="btn theme-toggle" aria-pressed="false">Тёмная тема</button>
+    </header>
+    <nav class="main-nav" aria-label="Основная навигация">
+        <a href="/">Каталог</a>
+        <a href="#skills">Навыки</a>
+        <a href="#books">Книги на полке</a>
+        <a href="#stats">Статистика чтения</a>
+        <a href="#quotes">Цитаты недели</a>
+        <a href="#contact">Обратная связь</a>
+    </nav>
+    <div class="wrapper">
+        <main>
+            <section id="skills">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>Анализ художественных текстов</li>
+                    <li>Написание рецензий</li>
+                    <li>Работа с источниками</li>
+                    <li>Редактура и вычитка</li>
+                    <li>Создание литературных сценариев</li>
+                </ul>
+            </section>
+            <section id="books">
+                <h2 id="books-title">Книги на полке</h2>
+                <div class="books-controls">
+                    <button type="button" id="add-book" class="btn">Добавить книгу</button>
+                    <button type="button" id="remove-book" class="btn">Удалить последнюю</button>
+                    <button type="button" id="toggle-books" class="btn" aria-expanded="true">Скрыть книги</button>
+                    <button type="button" id="check-elements" class="btn btn--ghost">Проверить элементы</button>
+                </div>
+                <div class="books-body" id="books-body">
+                    <div class="books" id="books-list"></div>
+                    <p class="books-empty" id="books-empty" hidden>Полка пуста — добавьте первую книгу.</p>
+                </div>
+            </section>
+            <section id="stats" class="stats">
+                <h2>Статистика чтения</h2>
+                <p class="stats-lead">Прочитано страниц по дням: <span id="stats-days" class="stats-days">—</span></p>
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <span class="stats-value" id="stats-total">—</span>
+                        <span class="stats-label">Всего страниц</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-value" id="stats-max">—</span>
+                        <span class="stats-label">Максимум за день</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-value" id="stats-high">—</span>
+                        <span class="stats-label">Дней с темпом &gt; 50</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-value" id="stats-lazy">—</span>
+                        <span class="stats-label">Ленивых дней (≤ 20)</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-value" id="stats-average">—</span>
+                        <span class="stats-label">Среднее в день</span>
+                    </div>
+                    <div class="stats-card">
+                        <span class="stats-value" id="stats-share">—</span>
+                        <span class="stats-label">Доля ленивых дней</span>
+                    </div>
+                </div>
+                <p id="stats-summary" class="stats-summary"></p>
+            </section>
+            <section id="quotes">
+                <h2>Цитаты недели</h2>
+                <div class="quotes-grid">
+                    <blockquote class="quote-card">
+                        <p class="quote-text">«Рукописи не горят».</p>
+                        <footer class="quote-meta">
+                            <cite class="quote-author">Михаил Булгаков</cite>
+                            <span class="quote-book">«Мастер и Маргарита»</span>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="quote-card">
+                        <p class="quote-text">«Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему».</p>
+                        <footer class="quote-meta">
+                            <cite class="quote-author">Лев Толстой</cite>
+                            <span class="quote-book">«Анна Каренина»</span>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="quote-card">
+                        <p class="quote-text">«Мы в ответе за тех, кого приручили».</p>
+                        <footer class="quote-meta">
+                            <cite class="quote-author">Антуан де Сент-Экзюпери</cite>
+                            <span class="quote-book">«Маленький принц»</span>
+                        </footer>
+                    </blockquote>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Обратная связь</h2>
+                <form>
+                    <label for="username">Имя:</label>
+                    <input type="text" id="username" name="username" placeholder="Введите ваше имя" required>
+
+                    <label for="useremail">Email:</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="example@mail.com" required>
+
+                    <label for="usermessage">Сообщение:</label>
+                    <textarea id="usermessage" name="usermessage" placeholder="Напишите ваше сообщение..." required></textarea>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Любимый автор и жанр</h3>
+            <p><strong>Автор:</strong> Михаил Булгаков</p>
+            <p><strong>Жанры:</strong> проза, интеллектуальный роман</p>
+        </aside>
+    </div>
+    <footer>
+        <p>© 2026 Чеботарёв Владислав</p>
+    </footer>
+
+    <script src="/dom.js"></script>
+    <script src="/script.js"></script>
+    <script src="/pwa.js"></script>
+</body>
+</html>
